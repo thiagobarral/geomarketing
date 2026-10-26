@@ -1,0 +1,131 @@
+{
+  "seed": 7,
+  "n_train": 112,
+  "n_test": 48,
+  "n_sp": 296,
+  "regression": {
+    "selected": "arvore",
+    "cv_candidates": [
+      {
+        "modelo": "baseline_media",
+        "cv_score": -442910.4812610966,
+        "parametros": {}
+      },
+      {
+        "modelo": "linear",
+        "cv_score": -219819.8171778749,
+        "parametros": {}
+      },
+      {
+        "modelo": "svr",
+        "cv_score": -312458.2245755416,
+        "parametros": {
+          "svr__C": 100000.0
+        }
+      },
+      {
+        "modelo": "arvore",
+        "cv_score": -217796.7324379228,
+        "parametros": {
+          "decisiontreeregressor__max_depth": null,
+          "decisiontreeregressor__min_samples_leaf": 5
+        }
+      }
+    ],
+    "test_rmse": 132993.36191801794,
+    "test_r2": 0.8946319007410295
+  },
+  "classification": {
+    "selected": "random_forest",
+    "cv_candidates": [
+      {
+        "modelo": "baseline_majoritaria",
+        "cv_score": 0.18488529014844804,
+        "parametros": {}
+      },
+      {
+        "modelo": "logistica",
+        "cv_score": 0.8042067545744016,
+        "parametros": {}
+      },
+      {
+        "modelo": "knn",
+        "cv_score": 0.8575242231395481,
+        "parametros": {
+          "kneighborsclassifier__n_neighbors": 5
+        }
+      },
+      {
+        "modelo": "svm",
+        "cv_score": 0.8395242306426516,
+        "parametros": {
+          "svc__C": 10.0
+        }
+      },
+      {
+        "modelo": "random_forest",
+        "cv_score": 0.8803272179130303,
+        "parametros": {
+          "randomforestclassifier__min_samples_leaf": 3
+        }
+      }
+    ],
+    "test_accuracy": 0.7916666666666666,
+    "test_f1_macro": 0.794973544973545,
+    "labels": [
+      "Baixo",
+      "Médio",
+      "Alto"
+    ],
+    "confusion_matrix": [
+      [
+        14,
+        3,
+        2
+      ],
+      [
+        3,
+        12,
+        0
+      ],
+      [
+        0,
+        2,
+        12
+      ]
+    ],
+    "report": {
+      "Baixo": {
+        "precision": 0.8235294117647058,
+        "recall": 0.7368421052631579,
+        "f1-score": 0.7777777777777778,
+        "support": 19.0
+      },
+      "Médio": {
+        "precision": 0.7058823529411765,
+        "recall": 0.8,
+        "f1-score": 0.75,
+        "support": 15.0
+      },
+      "Alto": {
+        "precision": 0.8571428571428571,
+        "recall": 0.8571428571428571,
+        "f1-score": 0.8571428571428571,
+        "support": 14.0
+      },
+      "accuracy": 0.7916666666666666,
+      "macro avg": {
+        "precision": 0.7955182072829131,
+        "recall": 0.7979949874686717,
+        "f1-score": 0.794973544973545,
+        "support": 48.0
+      },
+      "weighted avg": {
+        "precision": 0.7965686274509803,
+        "recall": 0.7916666666666666,
+        "f1-score": 0.7922453703703703,
+        "support": 48.0
+      }
+    }
+  }
+}
